@@ -15,3 +15,9 @@ github_username:  apoorvam
 
 # Build settings
 markdown: kramdown
+
+gems: [jekyll-paginate]
+
+# Paginate
+paginate: 3
+paginate_path: "/page-:num/"
