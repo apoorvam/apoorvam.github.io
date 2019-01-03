@@ -6,7 +6,7 @@ comments: false
 categories: gpg import transfer
 ---
 
-If you have GPG keys generated in one machine say `machine1` and now you want to transfer it to another machine say `machine2` along with secret keys, here is how can do.
+If you have GPG keys generated in one machine say `machine1` and now you want to transfer it to another machine say `machine2` along with secret keys, here is how you can do.
 
 In `machine1`, export the public and private keys as follows.
 
