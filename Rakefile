@@ -7,7 +7,7 @@ require "bourbon"
 
 # Change your GitHub reponame
 GITHUB_REPONAME = "apoorvam/apoorvam.github.io"
-GITHUB_REPO_BRANCH = "gh-pages"
+GITHUB_REPO_BRANCH = "master"
 
 SOURCE = "source/"
 DEST = "_site"
@@ -30,7 +30,7 @@ task :generate do
   })).process
 end
 
-desc "Generate and publish blog to gh-pages"
+desc "Generate and publish blog to master branch"
 task :publish => [:generate] do
   Dir.mktmpdir do |tmp|
     cp_r "_site/.", tmp
