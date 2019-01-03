@@ -1,23 +1,52 @@
-# Welcome to Jekyll!
-#
-# This config file is meant for settings that affect your whole blog, values
-# which you are expected to set up once and rarely need to edit after that.
-# For technical reasons, this file is *NOT* reloaded automatically when you use
-# 'jekyll serve'. If you change this file, please restart the server process.
-
-# Site settings
-title: Apoorva M
-description: My world, My code, My blog
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://apoorvam.github.io" # the base hostname & protocol for your site
-twitter_username: ItsApoorvaHere
-github_username:  apoorvam
-
 # Build settings
+permalink: /blog/:year/:title/
 markdown: kramdown
+highlighter: pygments
+plugins: [jekyll-paginate-v2]
 
-gems: [jekyll-paginate]
+pagination:
+  enabled: true
+  per_page: 5
+  permalink: "/page/:num/"
 
-# Paginate
-paginate: 3
-paginate_path: "/page-:num/"
+comments: false
+
+source: source
+destination: _site
+sass:
+  sass_dir: _sass
+  style: compressed # expanded
+
+# SEO settings
+title: Apoorva Manjunath
+description: "Apoorva Manjunath"
+keywords: "apoorvam, apoorva, blog, developer, thoughtworks, golang"
+url: https://apoorvam.github.io
+baseurl: 
+
+google_analytics: 
+repo: http://github.com/apoorvam
+disqus_shortname: 
+disqus_site_shortname: 
+
+# Author settings
+author:
+  name: Apoorva Manjunath
+  job: "Software Developer"
+  bio: "Ex-ThoughtWorker | Passionate coder | Love artistic things | Music lover | Wanderlust"
+  thumb: /images/apoorvam.jpg
+  email: app.apoorva@gmail.com
+  url: https://apoorvam.github.io
+  github: https://github.com/apoorvam
+  twitter: https://twitter.com/ItsApoorvaHere
+  slideshare: https://www.slideshare.net/ApoorvaM4
+  linkedin: https://www.linkedin.com/in/apoorvam6
+
+# navbar pages
+navbar:
+  - slug: about
+    title: About
+  - slug: blog
+    title: Blog
+
+exclude: ["config.rb", "src", "Gemfile", "Gemfile.lock", "package.json","README.md", "Rakefile"]
