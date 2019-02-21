@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Sorting Algorithms explained"
+title: "Sorting Algorithms Explained"
 permalink: sorting-algoritms-explained
 date: 2019-02-21 12:02:00
 comments: false
@@ -27,6 +27,8 @@ There are several sorting algorithms available for us to use. We might think Jav
 * Size of input
 
 A good combination of these attributes can be useful in choosing the right algorithm. At the end of this blog, I have summarized various sorting algorithms based on these factors. Full code of all the below algorithms can be found on Github.
+
+---
 
 ## Selection sort
 
@@ -96,11 +98,13 @@ public void sort(int[] arr, int[] aux, int start, int end) {
 Once we have two sorted arrays, merge can be done by having pointers at beginning of each and copying over the smaller item to new array to get sorted array until we reach the end of each array. 
 
 ![Merge sort visualization](/images/mergesort_viz.jpeg)
+
 Merge sort visualization. You can clearly see the divide and conquer technique used here. Source: Coursera
 
 ### Complexity
 
 Time:  Uses utmost N log N compares and 6N log N array accesses to sort any array.
+
 Space: Uses extra space proportional to N, for the auxiliary array.
 
 ### Optimizations
@@ -150,7 +154,9 @@ It does more number of compares than merge sort, but this is faster because of l
 ### Time Complexity
 
 Best case: N lg N compares
+
 Worst case: N²/2 compares (quadratic)
+
 Average case: ~1.39 N lg N 
 
 ## 3-way Partitioning
@@ -190,7 +196,8 @@ private void sort(int[] arr, int low, int high) {
 }
 {% endhighlight %}
 
-Efficiency
+### Efficiency
+
 It is entropy optimal. Linear in many cases.
 
 
@@ -203,6 +210,8 @@ With so many sorting algorithms present out there, it's definitely worthwhile to
 ![Summary of various sorting algorithms](/images/sorting_summary.png)
 Summary of various sorting algorithms. Source: Coursera
 
-Implementation of all of these algorithms in Java can be found on Github: https://github.com/apoorvam/algorithms/tree/master/src/sorting
-This video on the visualization of various sorting algorithms helps to get a better understanding.
+Implementation of all of these algorithms in Java can be found on my [Github](https://github.com/apoorvam/algorithms/tree/master/src/sorting): [https://github.com/apoorvam/algorithms/tree/master/src/sorting](https://github.com/apoorvam/algorithms/tree/master/src/sorting)
+
+[This video](https://www.youtube.com/watch?v=kPRA0W1kECg) on the visualization of various sorting algorithms helps to get a better understanding.
+
 Thanks for reading!
