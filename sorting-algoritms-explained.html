@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="google-site-verification" content="o0UIOK-DhAKvtVZ8lUr9JcGYUP1qZZJxnjAafYNO2RQ" />
+
+<title>Sorting Algorithms Explained</title>
+<meta name="description" content="Sorting puts the elements of a list in a certain order. It’s important to understand and optimize sorting algorithms as it is used in various other algorithm...">
+<meta property="og:type" content="website" />
+
+<link rel="shortcut icon" type="image/png" href="/images/favicon.png" />
+<link rel="stylesheet" href="/css/main.css">
+<link rel="canonical" href="https://apoorvam.github.io/sorting-algoritms-explained">
+<link rel="alternate" type="application/rss+xml" title="Apoorva Manjunath" href="https://apoorvam.github.io/feed.xml" />
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', '', 'auto');
+  ga('send', 'pageview');
+</script>
+
+
+</head>
+<body>
+  <header class="site-header">
+  <div class="container">
+    <input type="checkbox" id="toggleNavbar">
+    <h1 class="logo"><a href="/">Apoorva<span>Manjunath</span></a></h1>
+    <label for="toggleNavbar" role="button" class="toggle-navbar-button">
+      <i class="icon icon-menu"></i>
+      <i class="icon icon-cross"></i>
+    </label>
+    <nav class="navbar">
+      <ul>
+        <li><a href="/" title="Home">Home</a></li>
+        
+          <li><a href="/about" title="About">About</a></li>
+        
+          <li><a href="/blog" title="Blog">Blog</a></li>
+        
+        <li><a href="/feed.xml" target="_blank"><i class="icon icon-rss"></i></a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+
+<main class="main-container">
+  <div class="container">
+    <article role="article" class="post">
+
+  <div class="card">
+    <header class="post-header">
+      <h1 class="post-title">Sorting Algorithms Explained</h1>
+      <em class="post-meta">
+        <time>Feb 21, 2019</time>
+      </em>
+    </header>
+
+    <div class="post-content">
+      
+      <p>Sorting puts the elements of a list in a certain order. It’s important to understand and optimize sorting algorithms as it is used in various other algorithms which require their input data to be sorted. Sorting algorithms are essential in a broad variety of applications including obvious ones like in the organization of a music library, binary search in a database to non-obvious ones in computer graphics and load balancing on a parallel computer. </p>
+
+<h2 id="which-algorithm-touse">Which algorithm to use?</h2>
+
+<p>There are several sorting algorithms available for us to use. We might think Java’s system sort is solid for all applications but turns out to be No! It can take quadratic time or even crash for certain killer inputs. It is important to choose the right sorting algorithm for our use case depending on various attributes like:</p>
+
+<ul>
+  <li>Stable? In-place?</li>
+  <li>Parallel? </li>
+  <li>Need guaranteed performance?</li>
+  <li>Distinct keys?</li>
+  <li>Is your list randomly ordered?</li>
+  <li>Linked lists or arrays?</li>
+  <li>Size of input</li>
+</ul>
+
+<p>A good combination of these attributes can be useful in choosing the right algorithm. At the end of this blog, I have summarized various sorting algorithms based on these factors. Full code of all the below algorithms can be found on Github.</p>
+
+<hr />
+
+<h2 id="selection-sort">Selection sort</h2>
+
+<p>It scans from left to right starting from 0th position, finding the smallest item to the right of the current position and then swap with the current element. </p>
+
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span></span><span class="kd">public</span> <span class="kt">void</span> <span class="nf">sort</span><span class="o">(</span><span class="kt">int</span><span class="o">[]</span> <span class="n">arr</span><span class="o">)</span> <span class="o">{</span>
+    <span class="kt">int</span> <span class="n">N</span> <span class="o">=</span> <span class="n">arr</span><span class="o">.</span><span class="na">length</span><span class="o">;</span>
+    <span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">N</span><span class="o">;</span> <span class="n">i</span><span class="o">++)</span> <span class="o">{</span>
+        <span class="kt">int</span> <span class="n">minIndex</span> <span class="o">=</span> <span class="n">i</span><span class="o">;</span>
+        <span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="o">;</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="n">N</span><span class="o">;</span> <span class="n">j</span><span class="o">++)</span> <span class="o">{</span>
+            <span class="k">if</span> <span class="o">(</span><span class="n">less</span><span class="o">(</span><span class="n">arr</span><span class="o">[</span><span class="n">j</span><span class="o">],</span> <span class="n">arr</span><span class="o">[</span><span class="n">minIndex</span><span class="o">]))</span> <span class="o">{</span>
+                <span class="n">minIndex</span> <span class="o">=</span> <span class="n">j</span><span class="o">;</span>
+            <span class="o">}</span>
+        <span class="o">}</span>
+        <span class="n">swap</span><span class="o">(</span><span class="n">arr</span><span class="o">,</span> <span class="n">i</span><span class="o">,</span> <span class="n">minIndex</span><span class="o">);</span>
+    <span class="o">}</span>
+<span class="o">}</span></code></pre></figure>
+
+<p>Starting the pointer i from 0,  moves i to right, identifies the index of least element minIndexon right and swaps it into the current position. </p>
+
+<h3 id="complexity">Complexity</h3>
+
+<p>It uses N²/2 compares and N swaps making it a quadratic algorithm irrespective of input. </p>
+
+<h2 id="insertion-sort">Insertion sort</h2>
+
+<p>Idea: In the iteration i, it swaps a[i] with each larger entry to its left. In a loop, </p>
+<ul>
+  <li>Move the pointer ito the right</li>
+  <li>Move j from right to left starting from i, swap a[i] with each large item to its left</li>
+</ul>
+
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span></span><span class="kd">public</span> <span class="kt">void</span> <span class="nf">sort</span><span class="o">(</span><span class="kt">int</span><span class="o">[]</span> <span class="n">arr</span><span class="o">)</span> <span class="o">{</span>
+    <span class="kt">int</span> <span class="n">N</span> <span class="o">=</span> <span class="n">arr</span><span class="o">.</span><span class="na">length</span><span class="o">;</span>
+    <span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">N</span><span class="o">;</span> <span class="n">i</span><span class="o">++)</span> <span class="o">{</span>
+        <span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="n">i</span><span class="o">;</span> <span class="n">j</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="o">;</span> <span class="n">j</span><span class="o">--)</span> <span class="o">{</span>
+            <span class="k">if</span> <span class="o">(</span><span class="n">less</span><span class="o">(</span><span class="n">arr</span><span class="o">[</span><span class="n">j</span><span class="o">],</span> <span class="n">arr</span><span class="o">[</span><span class="n">j</span> <span class="o">-</span> <span class="mi">1</span><span class="o">]))</span> <span class="n">swap</span><span class="o">(</span><span class="n">arr</span><span class="o">,</span> <span class="n">j</span><span class="o">,</span> <span class="n">j</span> <span class="o">-</span> <span class="mi">1</span><span class="o">);</span>
+            <span class="k">else</span> <span class="k">break</span><span class="o">;</span>
+        <span class="o">}</span>
+    <span class="o">}</span>
+<span class="o">}</span></code></pre></figure>
+
+<h3 id="complexity-1">Complexity</h3>
+
+<p>Worst case: Uses N²/2 compares and swaps (when the array is sorted in reverse order)
+Best case: N-1 compares and 0 swaps (when already sorted). This is better suited for partially sorted input.</p>
+
+<h2 id="merge-sort">Merge sort</h2>
+<p>Merge sort is the algorithm used in the sorting of objects in java.util.Arrays.sort() library. It uses divide and conquer technique to sort, with the idea: </p>
+<ul>
+  <li>Divide array into two halves</li>
+  <li>Recursively sort each of it</li>
+  <li>Merge the two halves</li>
+</ul>
+
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span></span><span class="kd">public</span> <span class="kt">void</span> <span class="nf">sort</span><span class="o">(</span><span class="kt">int</span><span class="o">[]</span> <span class="n">arr</span><span class="o">,</span> <span class="kt">int</span><span class="o">[]</span> <span class="n">aux</span><span class="o">,</span> <span class="kt">int</span> <span class="n">start</span><span class="o">,</span> <span class="kt">int</span> <span class="n">end</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">if</span> <span class="o">(</span><span class="n">end</span> <span class="o">==</span> <span class="n">start</span><span class="o">)</span> <span class="k">return</span><span class="o">;</span>
+    <span class="kt">int</span> <span class="n">mid</span> <span class="o">=</span> <span class="o">(</span><span class="n">start</span> <span class="o">+</span> <span class="n">end</span><span class="o">)</span> <span class="o">/</span> <span class="mi">2</span><span class="o">;</span>
+
+    <span class="n">sort</span><span class="o">(</span><span class="n">arr</span><span class="o">,</span> <span class="n">aux</span><span class="o">,</span> <span class="n">start</span><span class="o">,</span> <span class="n">mid</span><span class="o">);</span>
+    <span class="n">sort</span><span class="o">(</span><span class="n">arr</span><span class="o">,</span> <span class="n">aux</span><span class="o">,</span> <span class="n">mid</span> <span class="o">+</span> <span class="mi">1</span><span class="o">,</span> <span class="n">end</span><span class="o">);</span>
+    <span class="n">merge</span><span class="o">(</span><span class="n">arr</span><span class="o">,</span> <span class="n">aux</span><span class="o">,</span> <span class="n">start</span><span class="o">,</span> <span class="n">mid</span><span class="o">,</span> <span class="n">end</span><span class="o">);</span>
+<span class="o">}</span></code></pre></figure>
+
+<p>Once we have two sorted arrays, merge can be done by having pointers at beginning of each and copying over the smaller item to new array to get sorted array until we reach the end of each array. </p>
+
+<p><img src="/images/mergesort_viz.jpeg" alt="Merge sort visualization" /></p>
+
+<p>Merge sort visualization. You can clearly see the divide and conquer technique used here. Source: Coursera</p>
+
+<h3 id="complexity-2">Complexity</h3>
+
+<p>Time:  Uses utmost N log N compares and 6N log N array accesses to sort any array.</p>
+
+<p>Space: Uses extra space proportional to N, for the auxiliary array.</p>
+
+<h3 id="optimizations">Optimizations</h3>
+
+<ul>
+  <li>Use insertion sort for smaller array sizes, say ~ 7</li>
+  <li>Avoid merge process if already sorted. If the biggest element of left subarray is less than the smallest element of the right subarray, there is no need to a merge.</li>
+</ul>
+
+<h2 id="quick-sort">Quick sort</h2>
+
+<p>This algorithm is used in the sorting of primitive types in Arrays.sort() of java.util library. </p>
+
+<p>Idea: </p>
+<ul>
+  <li>Shuffle array(required for performance gains)</li>
+  <li>Partition it such that for some index k, arr[k] is in place, all entries to the left of k are smaller than arr[k] and all entries to the right of k are greater than arr[k]</li>
+  <li>Sort each piece recursively</li>
+</ul>
+
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span></span><span class="kd">public</span> <span class="kt">void</span> <span class="nf">sort</span><span class="o">(</span><span class="kt">int</span><span class="o">[]</span> <span class="n">arr</span><span class="o">)</span> <span class="o">{</span>
+    <span class="n">StdRandom</span><span class="o">.</span><span class="na">shuffle</span><span class="o">(</span><span class="n">arr</span><span class="o">);</span>
+    <span class="n">sort</span><span class="o">(</span><span class="n">arr</span><span class="o">,</span> <span class="mi">0</span><span class="o">,</span> <span class="n">arr</span><span class="o">.</span><span class="na">length</span> <span class="o">-</span> <span class="mi">1</span><span class="o">);</span>
+<span class="o">}</span>
+
+<span class="kd">private</span> <span class="kt">void</span> <span class="nf">sort</span><span class="o">(</span><span class="kt">int</span><span class="o">[]</span> <span class="n">arr</span><span class="o">,</span> <span class="kt">int</span> <span class="n">start</span><span class="o">,</span> <span class="kt">int</span> <span class="n">end</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">if</span> <span class="o">(</span><span class="n">end</span> <span class="o">&lt;=</span> <span class="n">start</span><span class="o">)</span> <span class="k">return</span><span class="o">;</span>
+
+    <span class="kt">int</span> <span class="n">partitionIndex</span> <span class="o">=</span> <span class="n">partition</span><span class="o">(</span><span class="n">arr</span><span class="o">,</span> <span class="n">start</span><span class="o">,</span> <span class="n">end</span><span class="o">);</span>
+    <span class="n">sort</span><span class="o">(</span><span class="n">arr</span><span class="o">,</span> <span class="n">start</span><span class="o">,</span> <span class="n">partitionIndex</span> <span class="o">-</span> <span class="mi">1</span><span class="o">);</span>
+    <span class="n">sort</span><span class="o">(</span><span class="n">arr</span><span class="o">,</span> <span class="n">partitionIndex</span> <span class="o">+</span> <span class="mi">1</span><span class="o">,</span> <span class="n">end</span><span class="o">);</span>
+<span class="o">}</span>
+
+<span class="kd">private</span> <span class="kt">int</span> <span class="nf">partition</span><span class="o">(</span><span class="kt">int</span><span class="o">[]</span> <span class="n">arr</span><span class="o">,</span> <span class="kt">int</span> <span class="n">low</span><span class="o">,</span> <span class="kt">int</span> <span class="n">high</span><span class="o">)</span> <span class="o">{</span>
+    <span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="n">low</span><span class="o">,</span> <span class="n">j</span> <span class="o">=</span> <span class="n">high</span> <span class="o">+</span> <span class="mi">1</span><span class="o">;</span>
+    <span class="k">while</span> <span class="o">(</span><span class="kc">true</span><span class="o">)</span> <span class="o">{</span>
+        <span class="k">while</span> <span class="o">(</span><span class="n">less</span><span class="o">(</span><span class="n">arr</span><span class="o">[++</span><span class="n">i</span><span class="o">],</span> <span class="n">arr</span><span class="o">[</span><span class="n">low</span><span class="o">]))</span> <span class="k">if</span> <span class="o">(</span><span class="n">i</span> <span class="o">==</span> <span class="n">high</span><span class="o">)</span> <span class="k">break</span><span class="o">;</span>
+        <span class="k">while</span> <span class="o">(</span><span class="n">less</span><span class="o">(</span><span class="n">arr</span><span class="o">[</span><span class="n">low</span><span class="o">],</span> <span class="n">arr</span><span class="o">[--</span><span class="n">j</span><span class="o">]))</span> <span class="k">if</span> <span class="o">(</span><span class="n">j</span> <span class="o">==</span> <span class="n">low</span><span class="o">)</span> <span class="k">break</span><span class="o">;</span>
+        <span class="k">if</span> <span class="o">(</span><span class="n">i</span> <span class="o">&gt;=</span> <span class="n">j</span><span class="o">)</span> <span class="k">break</span><span class="o">;</span>
+
+        <span class="n">swap</span><span class="o">(</span><span class="n">arr</span><span class="o">,</span> <span class="n">i</span><span class="o">,</span> <span class="n">j</span><span class="o">);</span>
+    <span class="o">}</span>
+    <span class="n">swap</span><span class="o">(</span><span class="n">arr</span><span class="o">,</span> <span class="n">low</span><span class="o">,</span> <span class="n">j</span><span class="o">);</span>
+    <span class="k">return</span> <span class="n">j</span><span class="o">;</span>
+<span class="o">}</span></code></pre></figure>
+
+<p>It does more number of compares than merge sort, but this is faster because of less data movement. Quick sort is in-place, but not stable sorting algorithm.</p>
+
+<h3 id="time-complexity">Time Complexity</h3>
+
+<p>Best case: N lg N compares</p>
+
+<p>Worst case: N²/2 compares (quadratic)</p>
+
+<p>Average case: ~1.39 N lg N </p>
+
+<h2 id="3-way-partitioning">3-way Partitioning</h2>
+<p>Quicksort takes quadratic time to sort items with duplicates. The 3-way partition can perform better than that. Idea is to partition array into 3 parts such that:</p>
+
+<ul>
+  <li>Entries between lt and gt are all equal to partition item</li>
+  <li>Entries to the left of lt are less than partition item</li>
+  <li>Entries to the right of gt are greater than partition item</li>
+</ul>
+
+<p><img src="/images/3way_partitioning.png" alt="3-way partitioning" />
+3-way partitioning. Source: Coursera</p>
+
+<p>If a[lo] is partition item v,</p>
+
+<ul>
+  <li>a[i] &lt; v, swap v and a[i], increment i and lt</li>
+  <li>a[i] &gt; v, swap a[i] and a[gt], decrement gt</li>
+  <li>a[i] == v, increment i </li>
+</ul>
+
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span></span><span class="kd">public</span> <span class="kt">void</span> <span class="nf">sort</span><span class="o">(</span><span class="kt">int</span><span class="o">[]</span> <span class="n">arr</span><span class="o">)</span> <span class="o">{</span>
+    <span class="n">sort</span><span class="o">(</span><span class="n">arr</span><span class="o">,</span> <span class="mi">0</span><span class="o">,</span> <span class="n">arr</span><span class="o">.</span><span class="na">length</span> <span class="o">-</span> <span class="mi">1</span><span class="o">);</span>
+<span class="o">}</span>
+<span class="kd">private</span> <span class="kt">void</span> <span class="nf">sort</span><span class="o">(</span><span class="kt">int</span><span class="o">[]</span> <span class="n">arr</span><span class="o">,</span> <span class="kt">int</span> <span class="n">low</span><span class="o">,</span> <span class="kt">int</span> <span class="n">high</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">if</span> <span class="o">(</span><span class="n">low</span> <span class="o">&gt;=</span> <span class="n">high</span><span class="o">)</span> <span class="k">return</span><span class="o">;</span>
+    <span class="kt">int</span> <span class="n">lt</span> <span class="o">=</span> <span class="n">low</span><span class="o">,</span> <span class="n">i</span> <span class="o">=</span> <span class="n">low</span><span class="o">,</span> <span class="n">gt</span> <span class="o">=</span> <span class="n">high</span><span class="o">;</span>
+    <span class="k">while</span><span class="o">(</span><span class="n">i</span> <span class="o">&lt;=</span> <span class="n">gt</span><span class="o">)</span> <span class="o">{</span>
+        <span class="k">if</span> <span class="o">(</span><span class="n">arr</span><span class="o">[</span><span class="n">i</span><span class="o">]</span> <span class="o">&lt;</span> <span class="n">arr</span><span class="o">[</span><span class="n">lt</span><span class="o">])</span> <span class="o">{</span>
+            <span class="n">swap</span><span class="o">(</span><span class="n">arr</span><span class="o">,</span> <span class="n">lt</span><span class="o">,</span> <span class="n">i</span><span class="o">);</span>
+            <span class="n">lt</span><span class="o">++;</span> <span class="n">i</span><span class="o">++;</span>
+        <span class="o">}</span> <span class="k">else</span> <span class="k">if</span> <span class="o">(</span><span class="n">arr</span><span class="o">[</span><span class="n">i</span><span class="o">]</span> <span class="o">&gt;</span> <span class="n">arr</span><span class="o">[</span><span class="n">lt</span><span class="o">])</span> <span class="o">{</span>
+            <span class="n">swap</span><span class="o">(</span><span class="n">arr</span><span class="o">,</span> <span class="n">gt</span><span class="o">,</span> <span class="n">i</span><span class="o">);</span>
+            <span class="n">gt</span><span class="o">--;</span>
+        <span class="o">}</span> <span class="k">else</span> <span class="n">i</span><span class="o">++;</span>
+    <span class="o">}</span>
+    <span class="n">sort</span><span class="o">(</span><span class="n">arr</span><span class="o">,</span> <span class="n">low</span><span class="o">,</span> <span class="n">lt</span><span class="o">-</span><span class="mi">1</span><span class="o">);</span>
+    <span class="n">sort</span><span class="o">(</span><span class="n">arr</span><span class="o">,</span> <span class="n">gt</span><span class="o">+</span><span class="mi">1</span><span class="o">,</span> <span class="n">high</span><span class="o">);</span>
+<span class="o">}</span></code></pre></figure>
+
+<h3 id="efficiency">Efficiency</h3>
+
+<p>It is entropy optimal. Linear in many cases.</p>
+
+<hr />
+
+<h1 id="summary">Summary</h1>
+
+<p>With so many sorting algorithms present out there, it’s definitely worthwhile to understand the pros and cons of each of it and use it according to our use case to obtain the best performance. Quicksort, fastest in practice and Merge sort which is a stable algorithm are the most popular ones. A simple in-place, stable, N log N guaranteed algorithm is yet to be seen. </p>
+
+<p><img src="/images/sorting_summary.png" alt="Summary of various sorting algorithms" />
+Summary of various sorting algorithms. Source: Coursera</p>
+
+<p>Implementation of all of these algorithms in Java can be found on my <a href="https://github.com/apoorvam/algorithms/tree/master/src/sorting">Github</a>: <a href="https://github.com/apoorvam/algorithms/tree/master/src/sorting">https://github.com/apoorvam/algorithms/tree/master/src/sorting</a></p>
+
+<p><a href="https://www.youtube.com/watch?v=kPRA0W1kECg">This video</a> on the visualization of various sorting algorithms helps to get a better understanding.</p>
+
+<p>Thanks for reading!</p>
+
+    </div>
+
+    
+
+  </div>
+
+</article>
+
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <ul class="social">
+  <li><a href="https://github.com/apoorvam" target="_blank"><i class="icon icon-github"></i></a></li>
+  <li><a href="https://twitter.com/ItsApoorvaHere" target="_blank"><i class="icon icon-twitter"></i></a></li>
+  <li><a href="https://www.slideshare.net/ApoorvaM4" target="_blank"><i class="icon icon-display"></i></a></li>
+  <li><a href="https://www.linkedin.com/in/apoorvam6" target="_blank"><i class="icon icon-linkedin"></i></a></li>
+</ul>
+    <p class="txt-medium-gray">
+      <small>&copy;2019 All rights reserved. Made with <a href="http://jekyllrb.com/" target="_blank">Jekyll</a> and ♥</small>
+    </p>
+  </div>
+</footer>
+
+
+  <a href="http://github.com/apoorvam" target="_blank" class="github-corner"><svg width="80" height="80" viewBox="0 0 250 250" style="fill:#337ab7; color:#fff; position: absolute; top: 0; border: 0; right: 0;"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a>
+</body>
+</html>

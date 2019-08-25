@@ -1,0 +1,614 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Apoorva Manjunath</title>
+    <description>Apoorva Manjunath</description>
+    <link>https://apoorvam.github.io/</link>
+    <atom:link href="https://apoorvam.github.io/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Sat, 24 Aug 2019 22:31:52 -0400</pubDate>
+    <lastBuildDate>Sat, 24 Aug 2019 22:31:52 -0400</lastBuildDate>
+    <generator>Jekyll v3.6.3</generator>
+    
+      <item>
+        <title>Google Summer Of Code 2019: The curtain falls</title>
+        <description>&lt;p&gt;&lt;img src=&quot;/images/gsoc_banner.png&quot; alt=&quot;Google Summer of Code 2019&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;This summer I got selected to be a part of &lt;a href=&quot;https://summerofcode.withgoogle.com&quot;&gt;Google Summer Of Code 2019&lt;/a&gt; with SCoRe Lab(Sustainable Computing Research Lab) and it just ended. With thousands of lines of code, endless discussions, meetings, pull requests and creative ideas, it was an awesome experience. Though I have worked for software organizations in past, this added a different flavour to it and made me happy. Here is a brief summary of the work.&lt;/p&gt;
+
+&lt;h1 id=&quot;dunner-the-docker-task-runner&quot;&gt;Dunner, The Docker Task Runner&lt;/h1&gt;
+
+&lt;p&gt;&lt;img src=&quot;images/gsoc_dunner.png&quot; alt=&quot;Apoorva - GSOC&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;abstract&quot;&gt;Abstract&lt;/h3&gt;
+
+&lt;p&gt;Dunner is an open-source task runner tool based on Docker, simple and flexible and written in Golang. It lets you define Docker tasks, configure the environment and automates execution with Docker container.&lt;/p&gt;
+
+&lt;p&gt;Major features include multiple command support, mount external directories, dependent tasks, Dunner Cookbook recipes, Asynchronous mode and environment variables support at global and local scopes. Dunner has easy installation process and multiple ways based on OS and platform.&lt;/p&gt;
+
+&lt;h2 id=&quot;useful-links&quot;&gt;Useful Links&lt;/h2&gt;
+
+&lt;h4 id=&quot;gsoc-project-page&quot;&gt;&lt;a href=&quot;https://summerofcode.withgoogle.com/projects/#5461263713304576&quot;&gt;GSoC Project Page&lt;/a&gt;&lt;/h4&gt;
+
+&lt;h4 id=&quot;gsoc-project-proposal&quot;&gt;&lt;a href=&quot;https://drive.google.com/file/d/1VGVtYi-qbh93SArHb6Eape2oQ3HaPBfL/view?usp=sharing&quot;&gt;GSoC Project Proposal&lt;/a&gt;&lt;/h4&gt;
+
+&lt;h4 id=&quot;github-organization-repo&quot;&gt;&lt;a href=&quot;https://github.com/leopardslab&quot;&gt;GitHub Organization Repo&lt;/a&gt;&lt;/h4&gt;
+
+&lt;h4 id=&quot;github-personal-repo&quot;&gt;&lt;a href=&quot;https://github.com/apoorvam&quot;&gt;GitHub Personal Repo&lt;/a&gt;&lt;/h4&gt;
+
+&lt;h4 id=&quot;commits-during-gsoc-2019&quot;&gt;Commits during GSoC 2019&lt;/h4&gt;
+
+&lt;p&gt;Commits are spread accross various Dunner repositories, major ones are below:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/leopardslab/dunner/commits?author=apoorvam&quot;&gt;Dunner&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/leopardslab/dunner-cookbook/commits?author=apoorvam&quot;&gt;Dunner Cookbook&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/leopardslab/dunner-gocd-plugin/commits?author=apoorvam&quot;&gt;Dunner GoCD Plugin&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/leopardslab/dunner-website/commits?author=apoorvam&quot;&gt;Dunner Website&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;project-demo-video&quot;&gt;&lt;a href=&quot;https://github.com/leopardslab/dunner/wiki/Introduction-to-Dunner&quot;&gt;Project Demo Video&lt;/a&gt;&lt;/h4&gt;
+
+&lt;h4 id=&quot;project-wiki&quot;&gt;&lt;a href=&quot;https://github.com/leopardslab/dunner/wiki&quot;&gt;Project Wiki&lt;/a&gt;&lt;/h4&gt;
+
+&lt;h4 id=&quot;project-website&quot;&gt;&lt;a href=&quot;https://dunner.io/&quot;&gt;Project Website&lt;/a&gt;&lt;/h4&gt;
+
+&lt;h4 id=&quot;gsoc-blog&quot;&gt;GSoC Blog&lt;/h4&gt;
+
+&lt;p&gt;Blog post on Dunner, titled &lt;a href=&quot;https://medium.com/@app.apoorva/run-your-docker-tasks-with-dunner-the-easy-way-921d87968237&quot;&gt;“Run your Docker tasks with Dunner, the easy way!”&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;summary&quot;&gt;Summary&lt;/h2&gt;
+
+&lt;p&gt;The aim of Project Dunner is to speed up the development process by automating deployment, build, release and other tasks using Docker container. Dunner gives the ability to define and configure Docker tasks in a file and hence, easy to share and manage with teams. Through GSoC I got opportunity to make Dunner feature rich and also implement various integrations.&lt;/p&gt;
+
+&lt;p&gt;A huge thanks to mentor @agentmilindu for their time and energy with the project, and thanks to @PratikDhanave @rehrumesh @agentmilindu for reviewing all PRs, attending catch-ups and for overall support. Special thanks to @ayushjn20 for being an all round great team-mate!&lt;/p&gt;
+
+&lt;h2 id=&quot;what-was-done&quot;&gt;What was done&lt;/h2&gt;
+
+&lt;p&gt;I worked on various areas of Dunner major ones including: Dunner, Dunner Cookbook, Release automation, Dunner GoCD Plugin and Documentation guides.&lt;/p&gt;
+
+&lt;h3 id=&quot;dunner&quot;&gt;Dunner&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Feature to initialize a project with dunner from command-line&lt;/li&gt;
+  &lt;li&gt;Implemented Dunner installation through packages as below for all OS/Platform and use Bintray to host some of these packages.
+    &lt;ul&gt;
+      &lt;li&gt;Homebrew&lt;/li&gt;
+      &lt;li&gt;Debian/Apt&lt;/li&gt;
+      &lt;li&gt;Snapcraft&lt;/li&gt;
+      &lt;li&gt;Yum/Dnf&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Implemented validation for Dunner task file with:
+    &lt;ul&gt;
+      &lt;li&gt;Generic struture for custom validations for each field&lt;/li&gt;
+      &lt;li&gt;Standard error messaging&lt;/li&gt;
+      &lt;li&gt;Ability to define translations for error messages&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Traverse upwards for Dunner task file &lt;a href=&quot;https://github.com/leopardslab/dunner/pull/141&quot;&gt;PR 141&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Implemented execution process of various task steps using Docker SDK&lt;/li&gt;
+  &lt;li&gt;Customize Dunner task options like User, Environment variables etc&lt;/li&gt;
+  &lt;li&gt;Initialize project with Dunner Cookbook recipe, along with progress updater&lt;/li&gt;
+  &lt;li&gt;Added colored ouput and better logging on terminal&lt;/li&gt;
+  &lt;li&gt;Integrated with CodeCov and improved code coverage of Dunner&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;dunner-cookbook&quot;&gt;&lt;a href=&quot;https://github.com/leopardslab/dunner-cookbook&quot;&gt;Dunner Cookbook&lt;/a&gt;&lt;/h3&gt;
+
+&lt;p&gt;A collection of Dunner recipes, which can be used as templates during initialization of Dunner in a project.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Designed the structure of this repository so it can be used by Dunner core and by any external sources&lt;/li&gt;
+  &lt;li&gt;Implemented recipes which can be used to develop, build, deploy and release Golang projects all inside Docker container&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;dunner-gocd-plugin&quot;&gt;&lt;a href=&quot;https://github.com/leopardslab/dunner-gocd-plugin&quot;&gt;Dunner GoCD Plugin&lt;/a&gt;&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Performed a feasiblity study and implemented Dunner GoCD Task Plugin for GoCD, an open-source CI/CD Server&lt;/li&gt;
+  &lt;li&gt;Ability to create a Dunner task with all configurations like mounts, image, envs etc&lt;/li&gt;
+  &lt;li&gt;Execution result displayed in GoCD result tab and ability to download dunner task file post execution&lt;/li&gt;
+  &lt;li&gt;Recognized in &lt;a href=&quot;https://www.gocd.org/plugins/#task&quot;&gt;GoCD Offical website&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Release and &lt;a href=&quot;https://github.com/leopardslab/dunner-gocd-plugin#dunner-gocd-plugin&quot;&gt;usage docs&lt;/a&gt; of plugin along with a demo video&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;cicd-and-release-automation&quot;&gt;CI/CD and Release Automation&lt;/h3&gt;
+
+&lt;p&gt;Having integrated with CI/CD tools, Dunner has every commit tested, merged and ready to release. Dunner releases are now automated completely! Starting from Github releases, dunner packages publishing to various external repositories like &lt;a href=&quot;https://bintray.com/leopardslab&quot;&gt;Bintray&lt;/a&gt;, Snap, HomeBrew are all just a click work.
+Integrated with GoReleaser library for generation of distribution packages and shell scripts to publish some artifacts to Bintray.&lt;/p&gt;
+
+&lt;h3 id=&quot;dunner-website&quot;&gt;&lt;a href=&quot;http://dunner.io&quot;&gt;Dunner Website&lt;/a&gt;&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Chose a suitable Gatsby template to use for Dunner website&lt;/li&gt;
+  &lt;li&gt;Implemented Dunner cookbook page to show all available recipes along with Dunner task file in markdown&lt;/li&gt;
+  &lt;li&gt;Integrated with Travis CI and added usage docs&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;documentation&quot;&gt;Documentation&lt;/h3&gt;
+
+&lt;p&gt;I believe having a great open source project comes from how easy it is to get started for the community via the
+project wall, lucid code, documentation and communication channels. I wrote various guides for Dunner and related repositories and made videos for certain usecases.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/leopardslab/Dunner/wiki/Installation-Guide&quot;&gt;Installation Guide&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/leopardslab/Dunner/wiki/User-Guide&quot;&gt;Usage Guide&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/leopardslab/Dunner/wiki/Developer-Guide&quot;&gt;Developer Guide&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/leopardslab/dunner/wiki/Introduction-to-Dunner&quot;&gt;Introduction Page&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Related PRs: &lt;a href=&quot;https://github.com/leopardslab/dunner/pull/144&quot;&gt;PR #144&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;what-is-left-to-do&quot;&gt;What is left to do&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Dunner as Daemon&lt;/strong&gt;: With Dunner as Daemon in background, various integrations can be done using the results from Dunner like reporting, profiling, etc. It can also expose various HTTP endpoints to use.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Task Scheduling&lt;/strong&gt;: With ability to schedule tasks, Dunner can run docker tasks in background.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Task Profiling&lt;/strong&gt;: Statistics on Dunner task execution can be useful to monitor for user.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Event driven execution&lt;/strong&gt;: With events defined for tasks like &lt;code&gt;Step X Started&lt;/code&gt;, &lt;code&gt;Image Pull Started&lt;/code&gt;, &lt;code&gt;Task Y Completed&lt;/code&gt;, it becomes easier for a reciever like Live Output in browser to listen these events and show results&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Notifications&lt;/strong&gt;: When run as daemon, notifications can be sent about execution status through various channels.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;references&quot;&gt;References&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/leopardslab/dunner/wiki&quot;&gt;Dunner Wiki&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://travis-ci.org/leopardslab/dunner&quot;&gt;Dunner CI/CD&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://bintray.com/leopardslab&quot;&gt;Dunner Bintray&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Dunner Plugin listing on &lt;a href=&quot;https://www.gocd.org/plugins/#task&quot;&gt;GoCD&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Try out &lt;a href=&quot;https://github.com/leopardslab/dunner/wiki&quot;&gt;Dunner&lt;/a&gt; and let me know what you think :)&lt;/p&gt;
+</description>
+        <pubDate>Sat, 24 Aug 2019 08:00:00 -0400</pubDate>
+        <link>https://apoorvam.github.io/gsoc</link>
+        <guid isPermaLink="true">https://apoorvam.github.io/gsoc</guid>
+        
+        <category>opensource,</category>
+        
+        <category>dunner,</category>
+        
+        <category>gsoc,</category>
+        
+        <category>google</category>
+        
+        
+        <category>gsoc</category>
+        
+      </item>
+    
+      <item>
+        <title>Sorting Algorithms Explained</title>
+        <description>&lt;p&gt;Sorting puts the elements of a list in a certain order. It’s important to understand and optimize sorting algorithms as it is used in various other algorithms which require their input data to be sorted. Sorting algorithms are essential in a broad variety of applications including obvious ones like in the organization of a music library, binary search in a database to non-obvious ones in computer graphics and load balancing on a parallel computer. &lt;/p&gt;
+
+&lt;h2 id=&quot;which-algorithm-touse&quot;&gt;Which algorithm to use?&lt;/h2&gt;
+
+&lt;p&gt;There are several sorting algorithms available for us to use. We might think Java’s system sort is solid for all applications but turns out to be No! It can take quadratic time or even crash for certain killer inputs. It is important to choose the right sorting algorithm for our use case depending on various attributes like:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Stable? In-place?&lt;/li&gt;
+  &lt;li&gt;Parallel? &lt;/li&gt;
+  &lt;li&gt;Need guaranteed performance?&lt;/li&gt;
+  &lt;li&gt;Distinct keys?&lt;/li&gt;
+  &lt;li&gt;Is your list randomly ordered?&lt;/li&gt;
+  &lt;li&gt;Linked lists or arrays?&lt;/li&gt;
+  &lt;li&gt;Size of input&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;A good combination of these attributes can be useful in choosing the right algorithm. At the end of this blog, I have summarized various sorting algorithms based on these factors. Full code of all the below algorithms can be found on Github.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;selection-sort&quot;&gt;Selection sort&lt;/h2&gt;
+
+&lt;p&gt;It scans from left to right starting from 0th position, finding the smallest item to the right of the current position and then swap with the current element. &lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;sort&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[]&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;arr&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;N&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;arr&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;length&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;N&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;++)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;minIndex&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;j&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;j&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;N&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;j&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;++)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+            &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;less&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;arr&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;j&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;],&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;arr&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;minIndex&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]))&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+                &lt;span class=&quot;n&quot;&gt;minIndex&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;j&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+            &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+        &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;swap&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;arr&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;minIndex&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Starting the pointer i from 0,  moves i to right, identifies the index of least element minIndexon right and swaps it into the current position. &lt;/p&gt;
+
+&lt;h3 id=&quot;complexity&quot;&gt;Complexity&lt;/h3&gt;
+
+&lt;p&gt;It uses N²/2 compares and N swaps making it a quadratic algorithm irrespective of input. &lt;/p&gt;
+
+&lt;h2 id=&quot;insertion-sort&quot;&gt;Insertion sort&lt;/h2&gt;
+
+&lt;p&gt;Idea: In the iteration i, it swaps a[i] with each larger entry to its left. In a loop, &lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Move the pointer ito the right&lt;/li&gt;
+  &lt;li&gt;Move j from right to left starting from i, swap a[i] with each large item to its left&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;sort&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[]&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;arr&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;N&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;arr&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;length&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;N&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;++)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;j&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;j&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;j&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;--)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+            &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;less&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;arr&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;j&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;],&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;arr&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;j&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]))&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;swap&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;arr&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;j&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;j&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+            &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;break&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+        &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;h3 id=&quot;complexity-1&quot;&gt;Complexity&lt;/h3&gt;
+
+&lt;p&gt;Worst case: Uses N²/2 compares and swaps (when the array is sorted in reverse order)
+Best case: N-1 compares and 0 swaps (when already sorted). This is better suited for partially sorted input.&lt;/p&gt;
+
+&lt;h2 id=&quot;merge-sort&quot;&gt;Merge sort&lt;/h2&gt;
+&lt;p&gt;Merge sort is the algorithm used in the sorting of objects in java.util.Arrays.sort() library. It uses divide and conquer technique to sort, with the idea: &lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Divide array into two halves&lt;/li&gt;
+  &lt;li&gt;Recursively sort each of it&lt;/li&gt;
+  &lt;li&gt;Merge the two halves&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;sort&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[]&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;arr&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[]&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;aux&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;start&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;end&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;end&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;start&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;mid&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;start&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;end&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;/&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+
+    &lt;span class=&quot;n&quot;&gt;sort&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;arr&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;aux&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;start&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;mid&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;sort&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;arr&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;aux&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;mid&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;end&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;merge&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;arr&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;aux&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;start&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;mid&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;end&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Once we have two sorted arrays, merge can be done by having pointers at beginning of each and copying over the smaller item to new array to get sorted array until we reach the end of each array. &lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/mergesort_viz.jpeg&quot; alt=&quot;Merge sort visualization&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Merge sort visualization. You can clearly see the divide and conquer technique used here. Source: Coursera&lt;/p&gt;
+
+&lt;h3 id=&quot;complexity-2&quot;&gt;Complexity&lt;/h3&gt;
+
+&lt;p&gt;Time:  Uses utmost N log N compares and 6N log N array accesses to sort any array.&lt;/p&gt;
+
+&lt;p&gt;Space: Uses extra space proportional to N, for the auxiliary array.&lt;/p&gt;
+
+&lt;h3 id=&quot;optimizations&quot;&gt;Optimizations&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Use insertion sort for smaller array sizes, say ~ 7&lt;/li&gt;
+  &lt;li&gt;Avoid merge process if already sorted. If the biggest element of left subarray is less than the smallest element of the right subarray, there is no need to a merge.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;quick-sort&quot;&gt;Quick sort&lt;/h2&gt;
+
+&lt;p&gt;This algorithm is used in the sorting of primitive types in Arrays.sort() of java.util library. &lt;/p&gt;
+
+&lt;p&gt;Idea: &lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Shuffle array(required for performance gains)&lt;/li&gt;
+  &lt;li&gt;Partition it such that for some index k, arr[k] is in place, all entries to the left of k are smaller than arr[k] and all entries to the right of k are greater than arr[k]&lt;/li&gt;
+  &lt;li&gt;Sort each piece recursively&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;sort&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[]&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;arr&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;StdRandom&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;shuffle&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;arr&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;sort&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;arr&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;arr&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;length&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;sort&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[]&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;arr&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;start&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;end&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;end&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;start&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+
+    &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;partitionIndex&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;partition&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;arr&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;start&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;end&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;sort&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;arr&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;start&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;partitionIndex&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;sort&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;arr&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;partitionIndex&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;end&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;partition&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[]&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;arr&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;low&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;high&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;low&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;j&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;high&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;while&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;while&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;less&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;arr&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[++&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;],&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;arr&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;low&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]))&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;high&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;break&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;while&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;less&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;arr&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;low&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;],&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;arr&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[--&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;j&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]))&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;j&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;low&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;break&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;j&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;break&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+
+        &lt;span class=&quot;n&quot;&gt;swap&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;arr&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;j&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;swap&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;arr&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;low&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;j&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;j&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;It does more number of compares than merge sort, but this is faster because of less data movement. Quick sort is in-place, but not stable sorting algorithm.&lt;/p&gt;
+
+&lt;h3 id=&quot;time-complexity&quot;&gt;Time Complexity&lt;/h3&gt;
+
+&lt;p&gt;Best case: N lg N compares&lt;/p&gt;
+
+&lt;p&gt;Worst case: N²/2 compares (quadratic)&lt;/p&gt;
+
+&lt;p&gt;Average case: ~1.39 N lg N &lt;/p&gt;
+
+&lt;h2 id=&quot;3-way-partitioning&quot;&gt;3-way Partitioning&lt;/h2&gt;
+&lt;p&gt;Quicksort takes quadratic time to sort items with duplicates. The 3-way partition can perform better than that. Idea is to partition array into 3 parts such that:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Entries between lt and gt are all equal to partition item&lt;/li&gt;
+  &lt;li&gt;Entries to the left of lt are less than partition item&lt;/li&gt;
+  &lt;li&gt;Entries to the right of gt are greater than partition item&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/3way_partitioning.png&quot; alt=&quot;3-way partitioning&quot; /&gt;
+3-way partitioning. Source: Coursera&lt;/p&gt;
+
+&lt;p&gt;If a[lo] is partition item v,&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;a[i] &amp;lt; v, swap v and a[i], increment i and lt&lt;/li&gt;
+  &lt;li&gt;a[i] &amp;gt; v, swap a[i] and a[gt], decrement gt&lt;/li&gt;
+  &lt;li&gt;a[i] == v, increment i &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;sort&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[]&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;arr&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;sort&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;arr&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;arr&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;length&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;sort&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[]&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;arr&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;low&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;high&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;low&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;high&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;lt&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;low&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;low&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;gt&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;high&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;while&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;gt&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;arr&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;arr&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;lt&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;])&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;swap&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;arr&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;lt&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;lt&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;++;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;++;&lt;/span&gt;
+        &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;arr&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;arr&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;lt&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;])&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;swap&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;arr&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;gt&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;gt&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;--;&lt;/span&gt;
+        &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;++;&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;sort&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;arr&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;low&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;lt&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;sort&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;arr&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;gt&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;high&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;h3 id=&quot;efficiency&quot;&gt;Efficiency&lt;/h3&gt;
+
+&lt;p&gt;It is entropy optimal. Linear in many cases.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h1 id=&quot;summary&quot;&gt;Summary&lt;/h1&gt;
+
+&lt;p&gt;With so many sorting algorithms present out there, it’s definitely worthwhile to understand the pros and cons of each of it and use it according to our use case to obtain the best performance. Quicksort, fastest in practice and Merge sort which is a stable algorithm are the most popular ones. A simple in-place, stable, N log N guaranteed algorithm is yet to be seen. &lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/sorting_summary.png&quot; alt=&quot;Summary of various sorting algorithms&quot; /&gt;
+Summary of various sorting algorithms. Source: Coursera&lt;/p&gt;
+
+&lt;p&gt;Implementation of all of these algorithms in Java can be found on my &lt;a href=&quot;https://github.com/apoorvam/algorithms/tree/master/src/sorting&quot;&gt;Github&lt;/a&gt;: &lt;a href=&quot;https://github.com/apoorvam/algorithms/tree/master/src/sorting&quot;&gt;https://github.com/apoorvam/algorithms/tree/master/src/sorting&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=kPRA0W1kECg&quot;&gt;This video&lt;/a&gt; on the visualization of various sorting algorithms helps to get a better understanding.&lt;/p&gt;
+
+&lt;p&gt;Thanks for reading!&lt;/p&gt;
+</description>
+        <pubDate>Thu, 21 Feb 2019 07:02:00 -0500</pubDate>
+        <link>https://apoorvam.github.io/sorting-algoritms-explained</link>
+        <guid isPermaLink="true">https://apoorvam.github.io/sorting-algoritms-explained</guid>
+        
+        <category>algorithms,</category>
+        
+        <category>sorting</category>
+        
+        
+        <category>algorithms</category>
+        
+      </item>
+    
+      <item>
+        <title>Mac OSX Development Setup Guide</title>
+        <description>&lt;p&gt;Recently, while setting the development environment on my new Mac, I thought it would be useful to maintain a repository of setup guide for most commonly used developer tools. I started documenting it with GitBook parallel to setting up my box. Here it is: &lt;a href=&quot;https://apoorvam.github.io/mac-dev-setup/&quot;&gt;Mac OSX Dev Setup Guide&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/mac-osx-dev-setup-guide.png&quot; alt=&quot;Mac OSX Development Setup Guide&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;This repository is open source and can be found on &lt;a href=&quot;https://github.com/apoorvam/mac-dev-setup&quot;&gt;GitHub&lt;/a&gt;. This guide covers the steps involved in setting up the development environment for common tools/languages/libraries all at one place. I also plan to add tips and tricks in the usage of these tools, which can be effective during development. For example, setting aliases for frequently used commands, keyboard friendly shortcuts, tricks in using Postgres. I have tried all of it on Mac Mountain Lion, Mojave and Mavericks. Many of us use containers which can have a predefined environment, but this is intended to be used for setting up native box for daily use.&lt;/p&gt;
+
+&lt;p&gt;If you have any feedback or if you wish to contribute to it, please send a pull request. You can add support to various other tools/languages/libraries.&lt;/p&gt;
+
+</description>
+        <pubDate>Fri, 04 Jan 2019 08:46:06 -0500</pubDate>
+        <link>https://apoorvam.github.io/mac-setup-guide</link>
+        <guid isPermaLink="true">https://apoorvam.github.io/mac-setup-guide</guid>
+        
+        <category>mac-dev-setup-guide,</category>
+        
+        <category>development-environment</category>
+        
+        
+        <category>mac-dev-setup-guide-</category>
+        
+      </item>
+    
+      <item>
+        <title>GoTerminal: Go library to render progress on terminal</title>
+        <description>&lt;p&gt;&lt;a href=&quot;https://github.com/apoorvam/goterminal&quot;&gt;GoTerminal&lt;/a&gt; is an open source Golang package for updating progress in the console. It is a simple cross-platform package and can be used to render progress in command line applications. For example, to show download progress, show the progress bar for test execution etc.&lt;/p&gt;
+
+&lt;p&gt;This can be visually rich and gives the user real-time feedback on background operations, without clumsy data. You can update text at any particular coordinate on screen easily using a &lt;code&gt;Writer&lt;/code&gt; instance. This can also be integrated with &lt;a href=&quot;https://github.com/daviddengcn/go-colortext&quot;&gt;Go-Colortext&lt;/a&gt; package to add colours to console text.&lt;/p&gt;
+
+&lt;h2 id=&quot;installation&quot;&gt;Installation&lt;/h2&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-go&quot; data-lang=&quot;go&quot;&gt;&lt;span&gt;&lt;/span&gt;  &lt;span class=&quot;k&quot;&gt;go&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;get&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;u&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;github&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;com&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;apoorvam&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;goterminal&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;h2 id=&quot;usage&quot;&gt;Usage&lt;/h2&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-go&quot; data-lang=&quot;go&quot;&gt;&lt;span&gt;&lt;/span&gt;    &lt;span class=&quot;kd&quot;&gt;func&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    	&lt;span class=&quot;c1&quot;&gt;// get an instance of writer&lt;/span&gt;
+    	&lt;span class=&quot;nx&quot;&gt;writer&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;:=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;goterminal&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;New&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+
+    	&lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;:=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;100&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    		&lt;span class=&quot;c1&quot;&gt;// add your text to writer&amp;#39;s buffer&lt;/span&gt;
+    		&lt;span class=&quot;nx&quot;&gt;fmt&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;Fprintf&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;writer&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;Downloading (%d/100) bytes...\n&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    		&lt;span class=&quot;c1&quot;&gt;// write to terminal&lt;/span&gt;
+    		&lt;span class=&quot;nx&quot;&gt;writer&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;Print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+    		&lt;span class=&quot;nx&quot;&gt;time&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;Sleep&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;time&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;Millisecond&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;200&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+    		&lt;span class=&quot;c1&quot;&gt;// clear the text written by the previous write, so that it can be re-written.&lt;/span&gt;
+    		&lt;span class=&quot;nx&quot;&gt;writer&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;Clear&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+    	&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+    	&lt;span class=&quot;c1&quot;&gt;// reset the writer&lt;/span&gt;
+    	&lt;span class=&quot;nx&quot;&gt;writer&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;Reset&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+    	&lt;span class=&quot;nx&quot;&gt;fmt&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;Println&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;Download finished!&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;h2 id=&quot;example&quot;&gt;Example&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/apoorvam/goterminal/master/doc/download_progress.gif&quot; alt=&quot;Download Progress&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Another example which uses the &lt;a href=&quot;github.com/daviddengcn/go-colortext&quot;&gt;go-colortext&lt;/a&gt; library to re-write text along with using colours. Here is an output of example:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/apoorvam/goterminal/master/doc/color_terminal.gif&quot; alt=&quot;Colored terminal, updating text&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Examples can be found &lt;a href=&quot;https://github.com/apoorvam/goterminal/tree/master/examples&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h3 id=&quot;more-on-usage&quot;&gt;More on usage&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Create a &lt;code&gt;Writer&lt;/code&gt; instance.&lt;/li&gt;
+  &lt;li&gt;Add your text to writer’s buffer and call &lt;code&gt;Print()&lt;/code&gt; to print text on Terminal. This can be called any number of times.&lt;/li&gt;
+  &lt;li&gt;Call &lt;code&gt;Clear()&lt;/code&gt; to move the cursor to the position where first &lt;code&gt;Print()&lt;/code&gt; started so that it can be over-written.&lt;/li&gt;
+  &lt;li&gt;&lt;code&gt;Reset()&lt;/code&gt; writer, so it clears its state for next Write.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Like it? &lt;a href=&quot;https://twitter.com/ItsApoorvaHere&quot;&gt;Let me know&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Questions or issues using GoTerminal? Post an issue on &lt;a href=&quot;https://github.com/apoorvam/goterminal/issues&quot;&gt;Github&lt;/a&gt;.&lt;/p&gt;
+
+</description>
+        <pubDate>Thu, 04 Jan 2018 09:26:02 -0500</pubDate>
+        <link>https://apoorvam.github.io/go-terminal</link>
+        <guid isPermaLink="true">https://apoorvam.github.io/go-terminal</guid>
+        
+        <category>go-library,</category>
+        
+        <category>progressbar</category>
+        
+        
+        <category>go-library</category>
+        
+      </item>
+    
+      <item>
+        <title>Golang: JSON Marshalling empty slices as empty arrays instead of null</title>
+        <description>&lt;p&gt;Recently I came across this gotcha in Golang while I was writing a plugin for &lt;a href=&quot;http://getgauge.io&quot;&gt;Gauge&lt;/a&gt; that generates JSON report.&lt;/p&gt;
+
+&lt;p&gt;Let me start with an example. Say I want to generate JSON by marshalling a type as follows:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-go&quot; data-lang=&quot;go&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;type&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Person&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;struct&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+	&lt;span class=&quot;nx&quot;&gt;Friends&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[]&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;string&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// Field should be exported&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;In this &lt;code&gt;Person&lt;/code&gt; entity, the field &lt;code&gt;Friends&lt;/code&gt; contains a list of friends represented as a slice of strings. This field could be returned as &lt;code&gt;null&lt;/code&gt; from another service(Does that mean he has no friends? Ah no idea who this person is!).&lt;/p&gt;
+
+&lt;p&gt;I wrote the below code which marshals the input and was surprized to look at the output.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-go&quot; data-lang=&quot;go&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;f1&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[]&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;string&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;json1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;_&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;:=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;json&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;Marshal&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;Person&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;f1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;})&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;fmt&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;Printf&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;%s\n&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;json1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Output :&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-go&quot; data-lang=&quot;go&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;Friends&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;null&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;This marks the field &lt;code&gt;Friends&lt;/code&gt; as null whereas I was expecting it to have empty slice in JSON.&lt;/p&gt;
+
+&lt;p&gt;The reason for this was the way I had initialized the slice. When I initialize the &lt;code&gt;f1&lt;/code&gt; as &lt;code&gt;var f1 []string&lt;/code&gt;, it is a nil pointer and when marshalled, it gives you null instead of [].&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-go&quot; data-lang=&quot;go&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;x&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;interface&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{}&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;x&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;To fix this, I had to initialize the variable as &lt;code&gt;f2 := make([]string, 0)&lt;/code&gt; and this gives you output as empty slice instead of null.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-go&quot; data-lang=&quot;go&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;f2&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;:=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;make&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;([]&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;string&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;json2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;_&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;:=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;json&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;Marshal&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;Person&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;f2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;})&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;fmt&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;Printf&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;%s\n&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;json2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Output :&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-go&quot; data-lang=&quot;go&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;Friends&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:[]}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;The same example can be seen &lt;a href=&quot;https://play.golang.org/p/Q4ibfpFpju&quot;&gt;on the Go playground here&lt;/a&gt;. Full program for reference:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-go&quot; data-lang=&quot;go&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;kn&quot;&gt;package&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;main&lt;/span&gt;
+
+&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;
+	&lt;span class=&quot;s&quot;&gt;&amp;quot;encoding/json&amp;quot;&lt;/span&gt;
+	&lt;span class=&quot;s&quot;&gt;&amp;quot;fmt&amp;quot;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;kd&quot;&gt;type&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Person&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;struct&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+	&lt;span class=&quot;nx&quot;&gt;Friends&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[]&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;string&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;kd&quot;&gt;func&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+	&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;f1&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[]&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;string&lt;/span&gt;
+	&lt;span class=&quot;nx&quot;&gt;f2&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;:=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;make&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;([]&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;string&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+	&lt;span class=&quot;nx&quot;&gt;json1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;_&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;:=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;json&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;Marshal&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;Person&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;f1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;})&lt;/span&gt;
+	&lt;span class=&quot;nx&quot;&gt;json2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;_&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;:=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;json&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;Marshal&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;Person&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;f2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;})&lt;/span&gt;
+
+	&lt;span class=&quot;nx&quot;&gt;fmt&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;Printf&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;%s\n&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;json1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+	&lt;span class=&quot;nx&quot;&gt;fmt&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;Printf&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;%s\n&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;json2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+</description>
+        <pubDate>Thu, 19 Jan 2017 11:39:18 -0500</pubDate>
+        <link>https://apoorvam.github.io/blog/2017/golang-json-marshal-slice-as-empty-array-not-null/</link>
+        <guid isPermaLink="true">https://apoorvam.github.io/blog/2017/golang-json-marshal-slice-as-empty-array-not-null/</guid>
+        
+        <category>golang</category>
+        
+        
+        <category>golang</category>
+        
+        <category>json</category>
+        
+        <category>marshal</category>
+        
+        <category>slice</category>
+        
+        <category>empty</category>
+        
+        <category>null</category>
+        
+      </item>
+    
+      <item>
+        <title>Import secret GPG keys from one machine to another</title>
+        <description>&lt;p&gt;If you have GPG keys generated in one machine say &lt;code&gt;machine1&lt;/code&gt; and now you want to transfer it to another machine say &lt;code&gt;machine2&lt;/code&gt; along with secret keys, here is how you can do.&lt;/p&gt;
+
+&lt;p&gt;In &lt;code&gt;machine1&lt;/code&gt;, export the public and private keys as follows.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;&lt;span&gt;&lt;/span&gt;gpg --export &lt;span class=&quot;si&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;ID&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt; &amp;gt; public.key
+gpg --export-secret-key &lt;span class=&quot;si&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;ID&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt; &amp;gt; private.key&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Copy these public and private keys to &lt;code&gt;machine2&lt;/code&gt;. In case of Unix, you can use SCP (the &lt;code&gt;scp&lt;/code&gt; command) to securely copy files and directories between remote hosts.&lt;/p&gt;
+
+&lt;p&gt;In &lt;code&gt;machine2&lt;/code&gt;, go to the directory where you copied the keys to and run the following commands.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;&lt;span&gt;&lt;/span&gt;gpg --import public.key
+gpg --allow-secret-key-import --import private.key&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Here, the flag &lt;code&gt;--allow-secret-key-import&lt;/code&gt; gives the gpg permission to import private keys and flag &lt;code&gt;--import&lt;/code&gt; will actually import the key.&lt;/p&gt;
+
+&lt;p&gt;Now you can use &lt;code&gt;gpg --list-keys&lt;/code&gt; to list all the GPG keys.&lt;/p&gt;
+</description>
+        <pubDate>Thu, 14 Jul 2016 11:04:49 -0400</pubDate>
+        <link>https://apoorvam.github.io/blog/2016/import-gpg-keys/</link>
+        <guid isPermaLink="true">https://apoorvam.github.io/blog/2016/import-gpg-keys/</guid>
+        
+        
+        <category>gpg</category>
+        
+        <category>import</category>
+        
+        <category>transfer</category>
+        
+      </item>
+    
+  </channel>
+</rss>
