@@ -8,6 +8,7 @@ pagination:
   enabled: true
   per_page: 5
   permalink: "/page/:num/"
+  sort_reverse: true
 
 comments: false
 
@@ -22,12 +23,12 @@ title: Apoorva Manjunath
 description: "Apoorva Manjunath"
 keywords: "apoorvam, apoorva, blog, developer, thoughtworks, golang"
 url: https://apoorvam.github.io
-baseurl: 
+baseurl:
 
-google_analytics: 
+google_analytics:
 repo: http://github.com/apoorvam
-disqus_shortname: 
-disqus_site_shortname: 
+disqus_shortname:
+disqus_site_shortname:
 
 # Author settings
 author:

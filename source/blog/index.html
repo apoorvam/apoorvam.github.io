@@ -5,7 +5,7 @@ pagination:
 ---
 
 <section class="post-list">
-  {% for post in paginator.posts reversed %}
+  {% for post in paginator.posts %}
     {% include article.html %}
   {% endfor %}
 
