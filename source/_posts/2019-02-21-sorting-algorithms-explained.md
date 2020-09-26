@@ -57,8 +57,9 @@ It uses N²/2 compares and N swaps making it a quadratic algorithm irrespective 
 
 ## Insertion sort
 
-Idea: In the iteration i, it swaps a[i] with each larger entry to its left. In a loop, 
-* Move the pointer ito the right
+Idea: In the iteration i, all elements to the left of i will be sorted. When it expands with with a new element at position i, it should be inserted at the right position in sorted left part. So it loops through it using counter j and swaps a[i] with larger entry to its left. In a loop, 
+
+* Move the pointer i to the right
 * Move j from right to left starting from i, swap a[i] with each large item to its left
 
 {% highlight java %}
@@ -76,6 +77,7 @@ public void sort(int[] arr) {
 ### Complexity
 
 Worst case: Uses N²/2 compares and swaps (when the array is sorted in reverse order)
+
 Best case: N-1 compares and 0 swaps (when already sorted). This is better suited for partially sorted input.
 
 ## Merge sort
@@ -99,7 +101,7 @@ Once we have two sorted arrays, merge can be done by having pointers at beginnin
 
 ![Merge sort visualization](/images/mergesort_viz.jpeg)
 
-Merge sort visualization. You can clearly see the divide and conquer technique used here. Source: Coursera
+Merge sort visualization. You can clearly see the divide and conquer technique used here. Image Source: Coursera
 
 ### Complexity
 
