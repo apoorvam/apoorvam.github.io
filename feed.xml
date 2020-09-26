@@ -224,9 +224,10 @@ project wall, lucid code, documentation and communication channels. I wrote vari
 
 &lt;h2 id=&quot;insertion-sort&quot;&gt;Insertion sort&lt;/h2&gt;
 
-&lt;p&gt;Idea: In the iteration i, it swaps a[i] with each larger entry to its left. In a loop, &lt;/p&gt;
+&lt;p&gt;Idea: In the iteration i, all elements to the left of i will be sorted. When it expands with with a new element at position i, it should be inserted at the right position in sorted left part. So it loops through it using counter j and swaps a[i] with larger entry to its left. In a loop, &lt;/p&gt;
+
 &lt;ul&gt;
-  &lt;li&gt;Move the pointer ito the right&lt;/li&gt;
+  &lt;li&gt;Move the pointer i to the right&lt;/li&gt;
   &lt;li&gt;Move j from right to left starting from i, swap a[i] with each large item to its left&lt;/li&gt;
 &lt;/ul&gt;
 
@@ -242,8 +243,9 @@ project wall, lucid code, documentation and communication channels. I wrote vari
 
 &lt;h3 id=&quot;complexity-1&quot;&gt;Complexity&lt;/h3&gt;
 
-&lt;p&gt;Worst case: Uses N²/2 compares and swaps (when the array is sorted in reverse order)
-Best case: N-1 compares and 0 swaps (when already sorted). This is better suited for partially sorted input.&lt;/p&gt;
+&lt;p&gt;Worst case: Uses N²/2 compares and swaps (when the array is sorted in reverse order)&lt;/p&gt;
+
+&lt;p&gt;Best case: N-1 compares and 0 swaps (when already sorted). This is better suited for partially sorted input.&lt;/p&gt;
 
 &lt;h2 id=&quot;merge-sort&quot;&gt;Merge sort&lt;/h2&gt;
 &lt;p&gt;Merge sort is the algorithm used in the sorting of objects in java.util.Arrays.sort() library. It uses divide and conquer technique to sort, with the idea: &lt;/p&gt;
@@ -266,7 +268,7 @@ Best case: N-1 compares and 0 swaps (when already sorted). This is better suited
 
 &lt;p&gt;&lt;img src=&quot;/images/mergesort_viz.jpeg&quot; alt=&quot;Merge sort visualization&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;Merge sort visualization. You can clearly see the divide and conquer technique used here. Source: Coursera&lt;/p&gt;
+&lt;p&gt;Merge sort visualization. You can clearly see the divide and conquer technique used here. Image Source: Coursera&lt;/p&gt;
 
 &lt;h3 id=&quot;complexity-2&quot;&gt;Complexity&lt;/h3&gt;
 

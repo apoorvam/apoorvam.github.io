@@ -110,9 +110,10 @@
 
 <h2 id="insertion-sort">Insertion sort</h2>
 
-<p>Idea: In the iteration i, it swaps a[i] with each larger entry to its left. In a loop, </p>
+<p>Idea: In the iteration i, all elements to the left of i will be sorted. When it expands with with a new element at position i, it should be inserted at the right position in sorted left part. So it loops through it using counter j and swaps a[i] with larger entry to its left. In a loop, </p>
+
 <ul>
-  <li>Move the pointer ito the right</li>
+  <li>Move the pointer i to the right</li>
   <li>Move j from right to left starting from i, swap a[i] with each large item to its left</li>
 </ul>
 
@@ -128,8 +129,9 @@
 
 <h3 id="complexity-1">Complexity</h3>
 
-<p>Worst case: Uses N²/2 compares and swaps (when the array is sorted in reverse order)
-Best case: N-1 compares and 0 swaps (when already sorted). This is better suited for partially sorted input.</p>
+<p>Worst case: Uses N²/2 compares and swaps (when the array is sorted in reverse order)</p>
+
+<p>Best case: N-1 compares and 0 swaps (when already sorted). This is better suited for partially sorted input.</p>
 
 <h2 id="merge-sort">Merge sort</h2>
 <p>Merge sort is the algorithm used in the sorting of objects in java.util.Arrays.sort() library. It uses divide and conquer technique to sort, with the idea: </p>
@@ -152,7 +154,7 @@ Best case: N-1 compares and 0 swaps (when already sorted). This is better suited
 
 <p><img src="/images/mergesort_viz.jpeg" alt="Merge sort visualization" /></p>
 
-<p>Merge sort visualization. You can clearly see the divide and conquer technique used here. Source: Coursera</p>
+<p>Merge sort visualization. You can clearly see the divide and conquer technique used here. Image Source: Coursera</p>
 
 <h3 id="complexity-2">Complexity</h3>
 
