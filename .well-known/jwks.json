@@ -3,9 +3,11 @@
 {
  "kty": "EC",
  "crv": "P-256",
- "kid": "323703b0-3a1f-4703-8d89-ce2a4912ef64",
+ "kid": "CK9OG1VdSF6egmbonSGr0v85EYPjxXZhOeslo3KEuYg",
  "x": "faV9Z_PXpnpdAF9yl7V0nhtRdF-5Beik1e-VQDaHoiM",
- "y": "5FQ2gD4AE_y6UPgnRMMZEq262eEjAitBO345je37YHQ"
+ "y": "5FQ2gD4AE_y6UPgnRMMZEq262eEjAitBO345je37YHQ",
+ "alg":"ES256",
+ "use":"sig"
 }
   ]
 }
