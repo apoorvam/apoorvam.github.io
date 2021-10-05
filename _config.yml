@@ -50,5 +50,4 @@ navbar:
   - slug: blog
     title: Blog
 
-include: [".well-known"]
 exclude: ["config.rb", "src", "Gemfile", "Gemfile.lock", "package.json","README.md", "Rakefile"]
